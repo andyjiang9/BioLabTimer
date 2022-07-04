@@ -10,6 +10,7 @@ var count = 0;
 while (await timer.WaitForNextTickAsync()) {
     count++;
     Console.WriteLine($"Waited {count} second(s) | {target - count} second(s) remaining.");
+    Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
     if (count == target)
         timer.Dispose();
 }
