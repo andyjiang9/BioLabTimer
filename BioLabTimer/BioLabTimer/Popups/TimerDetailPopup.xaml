@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               x:Class="BioLabTimer.Popups.TimerDetailPopup"
+               >
+
+    <ContentView>
+        <VerticalStackLayout BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray600}}">
+
+            <Label 
+                Text="Add New Timer"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Row 0: Title -->
+                <Label Text="Title:"
+                HorizontalOptions="End"
+                VerticalOptions="Center"  
+                Grid.Row="0" 
+                Grid.Column="0"
+                       Margin="20, 10"/>
+
+                <Entry x:Name="entryTitle"
+                Placeholder="Enter a title ... "
+                Text="{Binding Title}"
+                Grid.Row="0" 
+                Grid.Column="1" 
+                       Margin="10, 10, 20, 10"/>
+
+                <!--TODO: 
+                TextChanged="OnTextChanged"
+                Completed="OnTextCompleted" 
+                -->
+
+                <!-- Row 1: Hour -->
+                <Label Text="Hour:"
+               HorizontalOptions="End"
+               VerticalOptions="Center"  
+                   Grid.Row="1" 
+                   Grid.Column="0"
+                       Margin="20, 10"/>
+
+                <Entry x:Name="entryHour"
+                Placeholder="0"
+                Grid.Row="1" 
+                Grid.Column="1" 
+                       Text="{Binding Hours}"
+                       Margin="10, 10, 20, 10"/>
+
+
+                <!-- Row 2: Minute -->
+                <Label Text="Minute:"
+               HorizontalOptions="End"
+               VerticalOptions="Center"  
+                   Grid.Row="2" 
+                   Grid.Column="0"
+                       Margin="20, 10"/>
+
+                <Entry x:Name="entryMinute"
+                Placeholder="0"
+                       Text="{Binding Minutes}"
+                Grid.Row="2" 
+                Grid.Column="1" 
+                       Margin="10, 10, 20, 10"/>
+
+                <!-- Row 3: Second -->
+                <Label Text="Minute:"
+               HorizontalOptions="End"
+               VerticalOptions="Center"  
+                   Grid.Row="3" 
+                   Grid.Column="0"
+                       Margin="20, 10"/>
+
+                <Entry x:Name="entrySecond"
+                Placeholder="0"
+                       Text="{Binding Seconds}"
+                Grid.Row="3" 
+                Grid.Column="1" 
+                       Margin="10, 10, 20, 10"/>
+
+                <!-- Row 4: Commands -->
+                <Label Text=""
+               HorizontalOptions="Start"
+               VerticalOptions="End"  
+                   Grid.Row="4" 
+                   Grid.Column="0"
+                       Margin="20, 10"/>
+
+                <HorizontalStackLayout Grid.Row="4" Grid.Column="1" HorizontalOptions="End">
+                    <Button 
+                x:Name="SaveBtn"
+                Text="Save"
+                SemanticProperties.Hint="Save Timer"
+                HorizontalOptions="Center"
+                Margin="10"
+                Clicked="OnSaveClicked"                        
+                        />
+                    <!-- TODO: Clicked="OnXXXXxxxxClicked" -->
+
+                    <Button 
+                x:Name="CandelBtn"
+                Text="Cancel"
+                SemanticProperties.Hint="Cancel"
+                HorizontalOptions="Center" 
+                Margin="20, 10"/>
+                    <!-- TODO: Clicked="OnXXXXxxxxClicked" -->
+                </HorizontalStackLayout>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ContentView>
+
+</toolkit:Popup>

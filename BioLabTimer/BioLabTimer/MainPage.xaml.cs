@@ -1,5 +1,8 @@
 ﻿namespace BioLabTimer;
 
+using BioLabTimer.Popups;
+using CommunityToolkit.Maui.Views;
+
 public partial class MainPage : ContentPage
 {
 	int count = 0;
@@ -20,5 +23,13 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+
+    private void OnNewTimerClicked(object sender, EventArgs e)
+    {
+		var viewModel = new TimerDetailPopupViewModel();
+        var popup = new TimerDetailPopup(viewModel);
+
+        this.ShowPopup(popup);
+    }
 }
 

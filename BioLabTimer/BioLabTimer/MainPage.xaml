@@ -35,6 +35,13 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Button 
+                x:Name="NewTimerBtn"
+                Text="New Timer"
+                SemanticProperties.Hint="Create a new timer"
+                Clicked="OnNewTimerClicked"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
  

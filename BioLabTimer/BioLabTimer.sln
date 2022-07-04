@@ -5,9 +5,11 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BioLabTimer", "BioLabTimer\BioLabTimer.csproj", "{D89D6FA9-8073-40A2-BAD9-F356B3330E16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioLabTimerInterfaces", "..\BioLabTimerInterfaces\BioLabTimerInterfaces.csproj", "{B811171F-0E73-486A-A978-1C5064CB49C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BioLabTimerInterfaces", "..\BioLabTimerInterfaces\BioLabTimerInterfaces.csproj", "{B811171F-0E73-486A-A978-1C5064CB49C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioLabTimerConsole", "..\BioLabTimerConsole\BioLabTimerConsole.csproj", "{83C9EA46-895E-4220-AB33-0913FB9AB274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BioLabTimerConsole", "..\BioLabTimerConsole\BioLabTimerConsole.csproj", "{83C9EA46-895E-4220-AB33-0913FB9AB274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioLabTimerServices", "BioLabTimerServices\BioLabTimerServices.csproj", "{20129E7D-7FA4-4BAB-B4A3-3AECE92D87B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{83C9EA46-895E-4220-AB33-0913FB9AB274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C9EA46-895E-4220-AB33-0913FB9AB274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83C9EA46-895E-4220-AB33-0913FB9AB274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20129E7D-7FA4-4BAB-B4A3-3AECE92D87B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20129E7D-7FA4-4BAB-B4A3-3AECE92D87B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20129E7D-7FA4-4BAB-B4A3-3AECE92D87B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20129E7D-7FA4-4BAB-B4A3-3AECE92D87B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

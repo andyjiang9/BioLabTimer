@@ -48,4 +48,25 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="1.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\BioLabTimerInterfaces\BioLabTimerInterfaces.csproj" />
+	  <ProjectReference Include="..\BioLabTimerServices\BioLabTimerServices.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Popups\TimerDetailPopup.xaml.cs">
+	    <DependentUpon>TimerDetailPopup.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Popups\TimerDetailPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
