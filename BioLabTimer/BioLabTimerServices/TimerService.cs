@@ -11,6 +11,21 @@ namespace BioLabTimerServices
 {
     public class TimerService : ITimerService
     {
+        public bool PauseTimer(ITimerRunnable timer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ResetTimer(ITimerRunnable timer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ResumeTimer(ITimerRunnable timer)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Implementation of file persistence.
         /// </summary>
@@ -25,11 +40,17 @@ namespace BioLabTimerServices
 
             string fileName = "testsetest.json";
             string jsonString = JsonSerializer.Serialize(timer);
+
+            // TODO: Check the directory exsiting. If not, create the folder BioLabTimer programatically.
+            // Use System.IO.Directory.CreateDirectory(...)
             File.WriteAllText($"{ heresthepath}\\Downloads\\poop\\{fileName}", jsonString);
-
-            
-
+                        
             return true;
+        }
+
+        public bool StartTimer(ITimerRunnable timer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

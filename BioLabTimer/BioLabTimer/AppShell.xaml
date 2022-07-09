@@ -7,7 +7,7 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
+        Title="BioLabTimer - University of Louisiana at Lafayette"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

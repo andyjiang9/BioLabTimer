@@ -10,7 +10,7 @@ using Timer = BioLabTimerServices.Timer;
 
 namespace BioLabTimer.Popups
 {
-    public class TimerDetailPopupViewModel
+    internal class TimerDetailPopupViewModel
     {
         private ITimer _timer = new Timer();
 
@@ -40,6 +40,13 @@ namespace BioLabTimer.Popups
         public void Save()
         {
             var service = new TimerService();
+
+            // TODO: Add validation for the timer, such as but limited to:
+            // 1. Not empty and not whitespace Title with minimal length of 3 letters.
+            // 2. 0-99 for hours
+            // 3. 0-59 for minutes
+            // 4. 0-59 for seconds
+
             service.SaveNewTimer(new Timer
             {
                 Title = this.Title,

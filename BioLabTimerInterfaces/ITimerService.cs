@@ -4,8 +4,12 @@
     {
         bool SaveNewTimer(ITimer timer);
 
-        //bool DeleteTimer(ITimer timer);
+        bool StartTimer(ITimerRunnable timer);
 
-        //bool UpdateTimer(ITimer timer);
+        bool PauseTimer(ITimerRunnable timer);
+
+        bool ResumeTimer(ITimerRunnable timer);
+
+        bool ResetTimer(ITimerRunnable timer);
     }
 }

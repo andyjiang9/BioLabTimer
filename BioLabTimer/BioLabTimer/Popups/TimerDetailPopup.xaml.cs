@@ -5,7 +5,7 @@ public partial class TimerDetailPopup : Popup
 {
 	TimerDetailPopupViewModel _viewModel;
 
-    public TimerDetailPopup(TimerDetailPopupViewModel viewModel)
+    internal TimerDetailPopup(TimerDetailPopupViewModel viewModel)
 	{
 		InitializeComponent();
 
@@ -14,7 +14,7 @@ public partial class TimerDetailPopup : Popup
         BindingContext = viewModel;
 	}
 
-	public void OnSaveClicked(object sender, EventArgs param)
+	internal void OnSaveClicked(object sender, EventArgs param)
     {
 
         _viewModel.Save();
