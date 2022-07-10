@@ -10,6 +10,42 @@
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="32"
                     HorizontalOptions="Center" />
+
+            <Label 
+                Text="Biology is relevant to our everyday experiences. It is the study of life, and is how we understand the world of living things. From medical advances to the challenges of decreasing rates of biodiversity, biology is the foundation on which great discoveries and changes happen."
+                FontSize="10" />
+            <Label 
+                Text="The Department of Biology at UL Lafayette investigates a wide range of research questions across many areas of the biological sciences. We are actively engaged in research and education as one of the largest biology programs located on the Gulf Coast. Our location in the heart of Louisiana provides us with research opportunities in a wide range of disciplines, including evolution, ecology, marine biology, neuroscience, and genetics."
+                FontSize="10" />
+            <Label 
+                Text="At UL Lafayette, we're proud to offer exceptional opportunities for students to learn, work, and collaborate at all levels of research alongside our accomplished faculty and local agencies."
+                FontSize="10" />
+            <Label 
+                Text="We offer a bachelor's degree in biology with specialized training in resource biology or in Medicine and Allied Heath, Microbiology, Veterinary Bioscience, and Ecology, Evolution, and Marine biology, resource biology or in biodiversity and microbiology."
+                FontSize="10" />
+            <Label 
+                Text="410 E. St. Mary Blvd."
+                FontSize="8" 
+                HorizontalOptions="Start" />
+            <Label 
+                Text="Billeaud Hall, Room 108"
+                FontSize="8" 
+                HorizontalOptions="Start" />
+            <Label 
+                Text="Lafayette, LA 70503"
+                FontSize="8" 
+                HorizontalOptions="Start" />
+            <Label 
+                Text="Phone: 337-482-6748"
+                FontSize="8" 
+                HorizontalOptions="Start" />
+            <Label 
+                Text="Fax: 337-482-5834"
+                FontSize="8" />
+            <Label 
+                Text="Email: biology@louisiana.edu"
+                FontSize="8" 
+                HorizontalOptions="Start" />
         </VerticalStackLayout>
     </ContentView>
    
