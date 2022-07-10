@@ -54,11 +54,18 @@
                 HorizontalOptions="Center" />
 
             <Button 
-                x:Name="settings"
+                x:Name="SettingsBtn"
                 Text="Settings"
                 Clicked="SettingsClicked"
                 HorizontalOptions="End" />
-            
+
+            <Button 
+                x:Name="AboutUsBtn"
+                Text="About Us"
+                SemanticProperties.Hint="Find out more about us!"
+                Clicked="AboutUsClicked"
+                HorizontalOptions="End" />
+
             <CollectionView ItemsSource="{Binding Timers}"
                     ItemTemplate="{StaticResource TimerSelector}" />
             

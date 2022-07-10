@@ -29,5 +29,13 @@ public partial class MainPage : ContentPage
 
         this.ShowPopup(popup);
     }
+
+    private void AboutUsClicked(object sender, EventArgs e)
+    {
+        var viewModel = new AboutUsDetailPopupViewModel();
+        var popup = new AboutUsDetailPopup(viewModel);
+
+        this.ShowPopup(popup);
+    }
 }
 
