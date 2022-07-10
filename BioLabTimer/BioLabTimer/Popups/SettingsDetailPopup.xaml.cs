@@ -14,4 +14,10 @@ public partial class SettingsDetailPopup : Popup
         BindingContext = viewModel;
     }
 
+    internal void OnSaveClicked(object sender, EventArgs param)
+    {
+
+        _viewModel.Save();
+    }
+
 }
