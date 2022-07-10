@@ -6,11 +6,26 @@
 
     <ContentPage.Resources>
         <DataTemplate x:Key="TimerStoppedTemplate">
-            <Label>Stopped</Label>
+            <VerticalStackLayout>
+                <Label Text="{Binding Title}"/>
+                <Label Text="{Binding TimeRemaining}"/>
+                <Button Command="{Binding FlipCommand}" Text="{Binding FlipText}" />
+                <Button Command="{Binding CancelCommand}" Text="Cancel" />
+                <Button Command="{Binding EditCommand}" Text="Edit" />
+                <Button Command="{Binding DeleteCommand}" Text="Delete" />
+            </VerticalStackLayout>
         </DataTemplate>
 
         <DataTemplate x:Key="TimerRunningTemplate">
-            <Label>Running</Label>
+            <VerticalStackLayout>
+                <Label Text="{Binding Title}"/>
+                <Label Text="{Binding TimeRemaining}" FontSize="18" FontAttributes="Bold"/>
+                <Button Command="{Binding FlipCommand}" Text="{Binding FlipText}" />
+                <Button Command="{Binding CancelCommand}" Text="Cancel" />
+                <Button Command="{Binding EditCommand}" Text="Edit" />
+                <Button Command="{Binding DeleteCommand}" Text="Delete" />
+            </VerticalStackLayout>
+
         </DataTemplate>
 
         <selectors:TimerSelector x:Key="TimerSelector"
