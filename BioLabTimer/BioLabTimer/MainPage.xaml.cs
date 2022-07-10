@@ -21,5 +21,13 @@ public partial class MainPage : ContentPage
 
         this.ShowPopup(popup);
     }
+
+    private void SettingsClicked(object sender, EventArgs e)
+    {
+        var viewModel = new SettingsDetailPopupViewModel();
+        var popup = new SettingsDetailPopup(viewModel);
+
+        this.ShowPopup(popup);
+    }
 }
 

@@ -53,6 +53,12 @@
                 Clicked="OnNewTimerClicked"
                 HorizontalOptions="Center" />
 
+            <Button 
+                x:Name="settings"
+                Text="Settings"
+                Clicked="SettingsClicked"
+                HorizontalOptions="End" />
+            
             <CollectionView ItemsSource="{Binding Timers}"
                     ItemTemplate="{StaticResource TimerSelector}" />
             
