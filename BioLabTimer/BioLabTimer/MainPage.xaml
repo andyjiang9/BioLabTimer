@@ -78,7 +78,11 @@
                 SemanticProperties.Hint="test"
                 Text="Test Sound" />
 
-            <CollectionView ItemTemplate="{StaticResource TimerSelector}" ItemsSource="{Binding Timers}" />
+            <CollectionView ItemTemplate="{StaticResource TimerSelector}" ItemsSource="{Binding Timers}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>

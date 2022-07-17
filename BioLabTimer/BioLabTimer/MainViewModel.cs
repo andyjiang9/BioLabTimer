@@ -16,9 +16,16 @@ namespace BioLabTimer
                 new TimerTaskViewModel(new Timer()
                 {
                     Title = "Testing ", 
-                    Hours = 1, 
-                    Minutes =2, 
-                    Seconds =3,
+                    Hours = 0, 
+                    Minutes = 0, 
+                    Seconds = 3,
+                }),
+                new TimerTaskViewModel(new Timer()
+                {
+                    Title = "Testing 2",
+                    Hours = 0,
+                    Minutes = 0,
+                    Seconds = 5,
                 })
             };
         }

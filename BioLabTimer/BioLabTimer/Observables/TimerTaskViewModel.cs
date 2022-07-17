@@ -2,6 +2,8 @@
 using CommunityToolkit.Mvvm.Input;
 using BioLabTimerInterfaces;
 
+using WMPLib;
+
 namespace BioLabTimer.Observables
 {
     internal class TimerTaskViewModel : ObservableObject, ITimerRunnable
@@ -170,6 +172,9 @@ namespace BioLabTimer.Observables
                 // create a timer which will call back in 1 second
                 var timer = new PeriodicTimer(TimeSpan.FromSeconds(1));
 
+                // creates the player
+                WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
                 // wait for call back
                 while (await timer.WaitForNextTickAsync())
                 { 
@@ -179,10 +184,17 @@ namespace BioLabTimer.Observables
                         break;
                     }
 
-                    if (Target > 0)
+                    if (Target > 1)
                         Target--;
                     else
+                    {
+                        Target--;
                         timer.Dispose();
+
+                        wplayer.URL = "C:\\Users\\Andy Jiang\\Videos\\.Useful Sound Effects\\Cute Aww Sound Effect.mp3";
+                        wplayer.controls.play();
+                    }
+                        
                 }
             }, _cancellationSource.Token);
 

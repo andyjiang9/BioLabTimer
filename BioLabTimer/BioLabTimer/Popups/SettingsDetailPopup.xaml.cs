@@ -1,5 +1,9 @@
+using Microsoft.Maui.Controls.PlatformConfiguration;
+
 namespace BioLabTimer.Popups;
 using CommunityToolkit.Maui.Views;
+
+
 
 public partial class SettingsDetailPopup : Popup
 {
@@ -18,6 +22,13 @@ public partial class SettingsDetailPopup : Popup
     {
 
         _viewModel.Save();
+    }
+
+    internal void FindFolder(object sender, EventArgs param)
+    {
+      
+
+       
     }
 
 }

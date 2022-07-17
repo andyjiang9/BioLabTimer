@@ -23,6 +23,8 @@
                 Placeholder=""
                 Text="{Binding OnSaveClicked}" />
 
+            <Button Clicked="FindFolder" Text="Choose Folder" />
+
             <Button Clicked="OnSaveClicked" Text="Save Path" />
         </VerticalStackLayout>
     </ContentView>
