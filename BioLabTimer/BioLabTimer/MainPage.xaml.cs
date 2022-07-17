@@ -3,6 +3,8 @@
 using BioLabTimer.Popups;
 using CommunityToolkit.Maui.Views;
 
+using WMPLib;
+
 public partial class MainPage : ContentPage
 {
 	int count = 0;
@@ -36,6 +38,15 @@ public partial class MainPage : ContentPage
         var popup = new AboutUsDetailPopup(viewModel);
 
         this.ShowPopup(popup);
+    }
+
+    private void SoundClicked(object sender, EventArgs e)
+    {
+        //axWindowsMediaPlayer1.URL = @"c:\mediafile.wmv";
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
+        wplayer.URL = "C:\\Users\\Andy Jiang\\Videos\\.Useful Sound Effects\\We'll be right back Sound Effect meme.mp3";
+        wplayer.controls.play();
     }
 }
 
