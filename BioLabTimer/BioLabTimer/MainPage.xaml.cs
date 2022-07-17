@@ -6,12 +6,14 @@ using CommunityToolkit.Maui.Views;
 
 public partial class MainPage : ContentPage
 {
-
-	public MainPage()
+    private readonly IFolderPicker _folderPicker;
+    public MainPage(IFolderPicker folderPicker)
 	{
 		InitializeComponent();
 
         BindingContext = new MainViewModel();
+
+        _folderPicker = folderPicker;
     }
 
     private void OnNewTimerClicked(object sender, EventArgs e)
@@ -25,7 +27,7 @@ public partial class MainPage : ContentPage
     private void SettingsClicked(object sender, EventArgs e)
     {
         var viewModel = new SettingsDetailPopupViewModel();
-        var popup = new SettingsDetailPopup(viewModel);
+        var popup = new SettingsDetailPopup(viewModel, _folderPicker);
 
         this.ShowPopup(popup);
     }

@@ -3,19 +3,21 @@ using Microsoft.Maui.Controls.PlatformConfiguration;
 namespace BioLabTimer.Popups;
 using CommunityToolkit.Maui.Views;
 
-
-
 public partial class SettingsDetailPopup : Popup
 {
     SettingsDetailPopupViewModel _viewModel;
 
-    internal SettingsDetailPopup(SettingsDetailPopupViewModel viewModel)
+    private readonly IFolderPicker _folderPicker;
+
+    internal SettingsDetailPopup(SettingsDetailPopupViewModel viewModel, IFolderPicker folderPicker)
     {
         InitializeComponent();
 
         _viewModel = viewModel;
 
         BindingContext = viewModel;
+
+        _folderPicker = folderPicker;
     }
 
     internal void OnSaveClicked(object sender, EventArgs param)
@@ -24,11 +26,11 @@ public partial class SettingsDetailPopup : Popup
         _viewModel.Save();
     }
 
-    internal void FindFolder(object sender, EventArgs param)
+    internal async void FindFolder(object sender, EventArgs param)
     {
-      
+        var pickedFolder = await _folderPicker.PickFolder();
 
-       
+
     }
 
 }
