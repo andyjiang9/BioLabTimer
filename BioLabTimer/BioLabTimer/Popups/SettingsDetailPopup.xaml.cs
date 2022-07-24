@@ -29,8 +29,8 @@ public partial class SettingsDetailPopup : Popup
     internal async void FindFolder(object sender, EventArgs param)
     {
         var pickedFolder = await _folderPicker.PickFolder();
-
-
     }
+
+    internal void CancelSettings(object sender, EventArgs param) => Close();
 
 }

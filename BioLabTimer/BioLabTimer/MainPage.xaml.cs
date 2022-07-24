@@ -3,7 +3,7 @@
 using BioLabTimer.Popups;
 using CommunityToolkit.Maui.Views;
 
-
+using WMPLib;
 public partial class MainPage : ContentPage
 {
     private readonly IFolderPicker _folderPicker;
@@ -42,7 +42,9 @@ public partial class MainPage : ContentPage
 
     private void SoundClicked(object sender, EventArgs e)
     {
-        
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+        wplayer.URL = "C:\\Users\\Andy Jiang\\Videos\\.Useful Sound Effects\\Cute Aww Sound Effect.mp3";
+        wplayer.controls.play();
     }
 }
 

@@ -13,4 +13,6 @@ public partial class AboutUsDetailPopup : Popup
 
         BindingContext = viewModel;
     }
+
+    internal void CloseAboutUs(Object sender, EventArgs e) => Close();
 }

@@ -1,52 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="BioLabTimer.Popups.AboutUsDetailPopup">
+<toolkit:Popup
+    x:Class="BioLabTimer.Popups.AboutUsDetailPopup"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
     <ContentView>
         <VerticalStackLayout BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray600}}">
-            <Label 
-                Text="About Us"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="32"
-                    HorizontalOptions="Center" />
+            <Label
+                FontSize="32"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="About Us" />
 
-            <Label 
-                Text="Biology is relevant to our everyday experiences. It is the study of life, and is how we understand the world of living things. From medical advances to the challenges of decreasing rates of biodiversity, biology is the foundation on which great discoveries and changes happen."
-                FontSize="10" />
-            <Label 
-                Text="The Department of Biology at UL Lafayette investigates a wide range of research questions across many areas of the biological sciences. We are actively engaged in research and education as one of the largest biology programs located on the Gulf Coast. Our location in the heart of Louisiana provides us with research opportunities in a wide range of disciplines, including evolution, ecology, marine biology, neuroscience, and genetics."
-                FontSize="10" />
-            <Label 
-                Text="At UL Lafayette, we're proud to offer exceptional opportunities for students to learn, work, and collaborate at all levels of research alongside our accomplished faculty and local agencies."
-                FontSize="10" />
-            <Label 
-                Text="We offer a bachelor's degree in biology with specialized training in resource biology or in Medicine and Allied Heath, Microbiology, Veterinary Bioscience, and Ecology, Evolution, and Marine biology, resource biology or in biodiversity and microbiology."
-                FontSize="10" />
-            <Label 
-                Text="410 E. St. Mary Blvd."
-                FontSize="8" 
-                HorizontalOptions="Start" />
-            <Label 
-                Text="Billeaud Hall, Room 108"
-                FontSize="8" 
-                HorizontalOptions="Start" />
-            <Label 
-                Text="Lafayette, LA 70503"
-                FontSize="8" 
-                HorizontalOptions="Start" />
-            <Label 
-                Text="Phone: 337-482-6748"
-                FontSize="8" 
-                HorizontalOptions="Start" />
-            <Label 
-                Text="Fax: 337-482-5834"
-                FontSize="8" />
-            <Label 
-                Text="Email: biology@louisiana.edu"
-                FontSize="8" 
-                HorizontalOptions="Start" />
+            <Label FontSize="10" Text="Biology is relevant to our everyday experiences. It is the study of life, and is how we understand the world of living things. From medical advances to the challenges of decreasing rates of biodiversity, biology is the foundation on which great discoveries and changes happen." />
+            <Label FontSize="10" Text="The Department of Biology at UL Lafayette investigates a wide range of research questions across many areas of the biological sciences. We are actively engaged in research and education as one of the largest biology programs located on the Gulf Coast. Our location in the heart of Louisiana provides us with research opportunities in a wide range of disciplines, including evolution, ecology, marine biology, neuroscience, and genetics." />
+            <Label FontSize="10" Text="At UL Lafayette, we're proud to offer exceptional opportunities for students to learn, work, and collaborate at all levels of research alongside our accomplished faculty and local agencies." />
+            <Label FontSize="10" Text="We offer a bachelor's degree in biology with specialized training in resource biology or in Medicine and Allied Heath, Microbiology, Veterinary Bioscience, and Ecology, Evolution, and Marine biology, resource biology or in biodiversity and microbiology." />
+            <Label
+                FontSize="8"
+                HorizontalOptions="Start"
+                Text="410 E. St. Mary Blvd." />
+            <Label
+                FontSize="8"
+                HorizontalOptions="Start"
+                Text="Billeaud Hall, Room 108" />
+            <Label
+                FontSize="8"
+                HorizontalOptions="Start"
+                Text="Lafayette, LA 70503" />
+            <Label
+                FontSize="8"
+                HorizontalOptions="Start"
+                Text="Phone: 337-482-6748" />
+            <Label FontSize="8" Text="Fax: 337-482-5834" />
+            <Label
+                FontSize="8"
+                HorizontalOptions="Start"
+                Text="Email: biology@louisiana.edu" />
+            <Button Clicked="CloseAboutUs" Text="OK" />
+
         </VerticalStackLayout>
     </ContentView>
-   
+
 </toolkit:Popup>
